@@ -20,7 +20,7 @@ for i in range(3, num):
         #input()
         perimeters = (polygon.perimeter(nextGuess, i), polygon.perimeter(nextGuess, i+1))
         areas = (polygon.area(perimeters[0], i), polygon.area(perimeters[1], i+1))
-        if areas[0] - areas[1] < .00001 and areas[0] - areas[1] > -.00001:
+        if areas[0] - areas[1] < .00000001 and areas[0] - areas[1] > -.00000001:
             equalAt = nextGuess
             k[1] = .00000000
         elif areas[0] > areas[1]:
