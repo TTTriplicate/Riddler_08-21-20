@@ -3,7 +3,7 @@
 import sys
 import polygon #
 
-if len(sys.argv) < 2:#default case, find where 4 posts beats 3
+if len(sys.argv) < 2:   #default case, find where 4 posts beats 3
     num = 4
 elif len(sys.argv) == 2:
     num = int(sys.argv[1])
@@ -16,7 +16,7 @@ for i in range(3, num):
     #print("i =", i)
     equalAt = -1
     while equalAt == -1:
-        nextGuess = (k[0] + k[1])/2
+        nextGuess = (k[0] + k[1]) / 2
         #print(nextGuess)
         #input()
         perimeters = (polygon.perimeter(nextGuess, i), polygon.perimeter(nextGuess, i+1))
@@ -28,4 +28,4 @@ for i in range(3, num):
             k[0] = nextGuess
         elif areas[0] < areas[1]:
             k[1] = nextGuess
-    print(i+1, "Provides a greater area than", i, "sides for k smaller than", equalAt)
+    print(i+1, "Posts provides a greater area than", i, "posts for k smaller than", equalAt)
