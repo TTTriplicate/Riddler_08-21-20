@@ -4,7 +4,7 @@ import sys
 import polygon #
 
 if len(sys.argv) < 2:#default case, find where 4 posts beats 3
-    num = 1
+    num = 4
 elif len(sys.argv) == 2:
     num = int(sys.argv[1])
 else:
