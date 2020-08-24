@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 import sys
-import area, perimeter #
+import polygon #
 
 if len(sys.argv) < 2:#default case, find where 4 posts beats 3
     num = 1
@@ -18,8 +18,8 @@ for i in range(3, num):
         nextGuess = (k[0] + k[1])/2
         #print(nextGuess)
         #input()
-        perimeters = (perimeter.polygon(nextGuess, i), perimeter.polygon(nextGuess, i+1))
-        areas = (area.polygon(perimeters[0], i), area.polygon(perimeters[1], i+1))
+        perimeters = (polygon.perimeter(nextGuess, i), polygon.perimeter(nextGuess, i+1))
+        areas = (polygon.area(perimeters[0], i), polygon.area(perimeters[1], i+1))
         if areas[0] - areas[1] < .00001 and areas[0] - areas[1] > -.00001:
             equalAt = nextGuess
             k[1] = .00000000
