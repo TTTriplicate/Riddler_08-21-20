@@ -9,6 +9,7 @@ elif len(sys.argv) == 2:
     num = int(sys.argv[1])
 else:
     print("Please provide 0 or 1 arguments, the number of posts up to which you want to find values of k.")
+    exit
 
 k = [.2, .000000001]
 for i in range(3, num):
