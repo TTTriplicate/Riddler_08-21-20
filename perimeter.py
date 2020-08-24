@@ -2,6 +2,6 @@
 
 def polygon(k, sides):
     if (k * sides) >= 1:
-        return False
+        return 0
     else:
         return (1 - (k * sides))
